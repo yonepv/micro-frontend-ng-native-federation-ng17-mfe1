@@ -29,8 +29,7 @@
 					"options": {
 						"target": "mfe1:esbuild:development",
 						"rebuildDelay": 0,
-						"dev": true,
-						"port": 4218
+						"dev": true
 					}
 				},
 				"extract-i18n": {

@@ -1,4 +1,5 @@
-FROM node:alpine
+#stage 1: compile and build the project
+FROM node:alpine AS build
 
 WORKDIR /app
 COPY ./src ./src
@@ -9,6 +10,10 @@ COPY federation.config.js ./
 
 RUN npm install pnpm -g
 RUN pnpm install
+RUN pnpm build
 
-EXPOSE 4218
-CMD ["pnpm", "start"]
+#stage 2: serve app with nginx server
+FROM nginx:alpine
+COPY --from=build /app/dist/mfe1 /usr/share/nginx/html
+
+EXPOSE 80
