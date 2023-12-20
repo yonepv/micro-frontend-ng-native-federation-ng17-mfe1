@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'mfe1-app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, CounterComponent],
   templateUrl: './app.component.html',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-counter',
+  selector: 'mfe1-app-counter',
   standalone: true,
   imports: [],
   templateUrl: './counter.component.html',

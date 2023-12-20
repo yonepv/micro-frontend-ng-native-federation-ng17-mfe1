@@ -5,8 +5,7 @@ module.exports = withNativeFederation({
   name: 'mfe1',
 
   exposes: {
-    './Component': './src/app/app.component.ts',
-    './CounterComponent': './src/app/counter/counter.component.ts',
+    './Component': './src/app/app.component.ts'
   },
 
   shared: {
